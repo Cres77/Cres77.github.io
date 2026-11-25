@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Colin Crespo Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Colin Crespo, electrical engineering student at the University of Michigan: controls, power electronics and robotics projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="#top">Colin Crespo</a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HOME VIEW: intro, about, projects grid, contact -->
+  <div id="home-view">
+    <section class="hero wrap">
+      <p class="eyebrow">Electrical Engineering · University of Michigan · Class of 2027</p>
+      <h1>I design the power and control systems that make machines move.</h1>
+      <p class="lede">I'm Colin Crespo, a senior studying electrical engineering at the University of Michigan. I work on electrical power and control systems with experience in autonomous robots and large industrial machinery.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">See my projects</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="section wrap">
+      <h2 class="section-title">About me</h2>
+      <div class="about-grid">
+        <img class="portrait" src="images/headshot.webp" alt="Headshot of Colin Crespo">
+        <div class="about-text">
+          <p>I like hardware I can test with my hands. This past summer I was an electrical controls engineering intern at Laitram Machinery, where I wrote automated PLC test sequences that cut product testing time by 75%.</p>
+          <p>On campus I lead the electrical team for UM::Autonomy, which builds autonomous boats. I designed the boat's buck converter power system and led two teams of four that built boards to monitor the current, voltage and temperature of individual components. That work helped the team finish 4th in the world at the International RoboBoat Competition. I'm also a member of the Society of Hispanic Professional Engineers.</p>
+          <dl class="facts">
+            <div><dt>Studying</dt><dd>B.S. Electrical Engineering, University of Michigan, Spring 2027</dd></div>
+            <div><dt>Coursework</dt><dd>Digital Integrated Circuits, Logic Design, Data Structures &amp; Algorithms, Electromagnetics, Signals &amp; Systems</dd></div>
+            <div><dt>Programming</dt><dd>C, C++, Python, Verilog, JavaScript, MATLAB, Control Expert (PLC)</dd></div>
+            <div><dt>CAD &amp; PCB</dt><dd>KiCad, Altium, Fusion 360</dd></div>
+            <div><dt>Languages</dt><dd>English, Spanish</dd></div>
+            <div><dt>Looking for</dt><dd>Full time controls or electrical engineering roles, open to relocating</dd></div>
+          </dl>
+
+          <h3 class="sub-title">Experience</h3>
+          <ol class="timeline">
+            <li>
+              <div class="tl-head"><strong>Electrical Controls Engineer Intern</strong><span class="tl-date">May 2026 – Sep 2026</span></div>
+              <span class="tl-org">Laitram Machinery</span>
+              <p>Built automated PLC test sequences and machine control logic with safety interlocks and fault detection on Schneider PLC controlled machinery.</p>
+            </li>
+            <li>
+              <div class="tl-head"><strong>Electrical Team Lead</strong><span class="tl-date">Aug 2023 – Present</span></div>
+              <span class="tl-org">UM::Autonomy</span>
+              <p>Led the electrical subteam, designed the buck converter power system and led two teams of four that built boards to monitor the current, voltage and temperature of each component.</p>
+            </li>
+            <li>
+              <div class="tl-head"><strong>Appliance Technician &amp; Sales Representative</strong><span class="tl-date">May 2025 – Aug 2025</span></div>
+              <span class="tl-org">Appliances 4 Less</span>
+              <p>Repaired and tested more than 100 major appliances with a 95% first time fix rate.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section wrap">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Pick a project to read how it was built, with pictures.</p>
+      <div class="project-grid" id="project-grid"></div>
+    </section>
+
+    <section id="contact" class="section wrap">
+      <h2 class="section-title">Contact me</h2>
+      <p class="section-sub">Email is the best way to reach me. I'm happy to talk about controls, power electronics or open roles.</p>
+      <ul class="contact-list">
+        <li class="contact-item">
+          <span class="contact-label">Email</span>
+          <span class="contact-value" id="email-text">ccrespo@umich.edu</span>
+          <button class="btn btn-small" id="copy-email" type="button">Copy</button>
+        </li>
+        <li class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <a class="contact-value" href="https://www.linkedin.com/in/ccrespo77">linkedin.com/in/ccrespo77</a>
+        </li>
+        <li class="contact-item">
+          <span class="contact-label">Résumé</span>
+          <a class="contact-value" href="resume.pdf" target="_blank" rel="noopener">resume.pdf</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- PROJECT DETAIL VIEW: filled in by script.js -->
+  <article id="project-view" class="wrap project-view" hidden></article>
+</main>
+
+<footer class="site-footer wrap">
+  <span>© <span id="year">2026</span> Colin Crespo</span>
+  <a href="#top">Back to top</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
